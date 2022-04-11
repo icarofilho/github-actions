@@ -3,7 +3,7 @@ name: Workflow Principal
 on: [workflow_dispatch]
 
 jobs:
-  build:
+  ubuntu:
     runs-on: ubuntu-latest
     steps:
       - name: versão ubuntu
@@ -11,3 +11,15 @@ jobs:
         
       - name: versão node
         run: node --version
+        
+      - name: listar arquivos
+        run: ls -lh
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: verificar versão do windows
+        run: ver
+        
+      - name: o que tem neste diretorio
+        run: dir
