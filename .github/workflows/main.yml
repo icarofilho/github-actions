@@ -7,19 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: versão ubuntu
-        run: lsb_release -a
-        
-      - name: versão node
-        run: node --version
-        
-      - name: listar arquivos
-        run: ls -lh
-
-  windows:
-    runs-on: windows-latest
-    steps:
-      - name: verificar versão do windows
-        run: systeminfo
-        
-      - name: o que tem neste diretorio
-        run: dir
+        run: |
+          lsb_release -a
+          node --version
+          ls -lh
