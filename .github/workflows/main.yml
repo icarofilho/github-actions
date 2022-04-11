@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: versão ubuntu
-        run: lsb-release -a
+        run: lsb_release -a
