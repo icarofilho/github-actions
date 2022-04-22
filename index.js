@@ -1,0 +1,1 @@
+const vaiDarCerto = true
