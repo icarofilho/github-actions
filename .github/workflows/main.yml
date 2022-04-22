@@ -1,10 +1,9 @@
 name: Workflow Principal
 
 on: 
-  push:
-    branches: [main]
-  
-  
+  pull_request: 
+    branches: [develop]
+   
 
 jobs:
   build:
@@ -15,3 +14,20 @@ jobs:
         
       - name: Run hello
         run: echo "fim do comando"
+  
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Up merge
+      # You may pin to the exact commit or the version.
+      # uses: bambamboole/gha-upmerge@de87b212278009f9ace0ba024701890b9eb3281b
+        uses: bambamboole/gha-upmerge@v1.0.1
+        with:
+          # Name of the branch to merge from
+          from_branch: develop
+          # Name of the branch to merge to
+          to_branch: staging
+          # User name for git commits
+          user_name: icarofilho
+
+    
